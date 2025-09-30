@@ -1,16 +1,10 @@
 public class Produto {
-    public Produto(String nome, double preco, int quantidade) {
-        this.nome = nome;
-        this.preco = preco;
-        this.quantidade = quantidade;
-    }
-
     String nome;
     double preco;
     int quantidade;
 
-    public void exibirQuantidade() {
-        System.out.println("Quantidade: " + quantidade);
+    public void exibirDetalhes() {
+        System.out.println("Nome: " + nome + " | Preço: " + preco + " | Quantidade: " + quantidade);
     }
 
     public void calcularValorTotal() {
