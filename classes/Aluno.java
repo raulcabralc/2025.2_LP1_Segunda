@@ -1,17 +1,14 @@
-public class Aluno extends Pessoa {
+public final class Aluno extends Pessoa {
+    private String matricula;
+    private double media, n1, n2, n3;
+    private Cargo cargo;
+
     public Aluno(String nome, int idade, String matricula, double n1, double n2, double n3) {
         super(nome, idade);
         this.matricula = matricula;
         this.n1 = n1;
         this.n2 = n2;
         this.n3 = n3;
-    }
-
-    private String matricula;
-    private double media, n1, n2, n3;
-
-    public void calcularMedia() {
-        media = (n1 + n2 + n3) / 3;
     }
 
     public String getMatricula() {
@@ -53,4 +50,22 @@ public class Aluno extends Pessoa {
     public void setN3(double n3) {
         this.n3 = n3;
     }
+
+    public void calcularMedia() {
+        media = (n1 + n2 + n3) / 3;
+    }
+
+    public Cargo getCargo() {
+        return cargo;
+    }
+
+    public void setCargo(Cargo cargo) {
+        this.cargo = cargo;
+    }
+
+    @Override
+    public void quemSouEu() {}
+
+    @Override
+    public void minhaAtividade() {}
 }
