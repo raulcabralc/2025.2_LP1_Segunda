@@ -26,6 +26,7 @@ public class Main {
         Aluno a1 = new Aluno(nome, idade, matricula, n1, n2, n3);
 
         a1.calcularMedia();
+        a1.setCargo(Cargo.Aluno);
 
         if (a1.getMedia() >= 7) {
             System.out.println("Aprovado!");
@@ -39,8 +40,9 @@ public class Main {
                 " | Nota 1: " + a1.getN1() +
                 " | Nota 2: " + a1.getN2() +
                 " | Nota 3: " + a1.getN3() +
-                String.format(" | Média: %.2f", a1.getMedia())
-                );
+                String.format(" | Média: %.2f", a1.getMedia()) +
+                " | Cargo: " + a1.getCargo()
+        );
 
         sc.close();
     }
